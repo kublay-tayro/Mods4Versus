@@ -1,0 +1,23 @@
+{
+    "$schema": "https://schema.tauri.app/config/2/capability",
+    "identifier": "main-capability",
+    "description": "Main capability for Mods4Versus - allows file system and shell access",
+    "windows": [
+        "main"
+    ],
+    "permissions": [
+        "core:default",
+        "core:event:default",
+        "fs:default",
+        "fs:allow-read",
+        "fs:allow-write",
+        "fs:allow-exists",
+        "fs:allow-mkdir",
+        "fs:allow-remove",
+        "fs:allow-rename",
+        "fs:allow-copy-file",
+        "shell:default",
+        "shell:allow-open",
+        "shell:allow-execute"
+    ]
+}
