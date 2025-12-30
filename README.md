@@ -26,8 +26,6 @@
 
 </div>
 
-> **Requisito:** Tener Left 4 Dead 2 instalado en Steam.
-
 ---
 
 ## ✨ Características
