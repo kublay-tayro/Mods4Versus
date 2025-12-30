@@ -67,8 +67,11 @@
 ---
 
 ## 📝 Licencia y Contribuciones
+<div align="center">
 
 Este proyecto es de código abierto bajo la licencia GNU GPLv3. Para más detalles sobre cómo colaborar, consulta nuestra Guía de Contribución.
+
+</div>
 ---
 
 ## 👤 Autor
