@@ -9,7 +9,7 @@
 
 **Un gestor de mods nativo para Left 4 Dead 2**
 
-*Cambia fácilmente toda clase de Mods para poder jugarlos en Versus sin tener que copiar y pegar carpetas y usar el vkp.exe*
+*Cambia fácilmente toda clase de Mods para poder jugarlos en Versus sin tener que copiar y pegar carpetas y sin usar el vkp.exe o instalar nada extra*
 
 </div>
 
