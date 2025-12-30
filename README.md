@@ -9,9 +9,24 @@
 
 **Un gestor de mods nativo para Left 4 Dead 2**
 
-*Fusiona múltiples mods del Workshop en uno solo con un clic*
+*Cambia fácilmente toda clase de Mods para poder jugarlos en Versus sin tener que copiar y pegar carpetas y sin usar el vkp.exe o instalar nada extra*
 
 </div>
+
+---
+
+## 📥 Descargar
+
+<div align="center">
+
+| Versión | Descripción | Enlace |
+|---------|-------------|--------|
+| **Installer** | Instalador con acceso directo y desinstalador | [⬇️ Descargar Setup](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/Mods4Versus_1.0.0_x64-setup.exe) |
+| **Portable** | Versión portable (Ejecuta sin instalar) | [⬇️ Descargar Portable](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/mods4versus_portable.exe) |
+
+</div>
+
+> **Requisito:** Tener Left 4 Dead 2 instalado en Steam.
 
 ---
 
@@ -33,15 +48,7 @@
 
 </div>
 
----
-
-## 🛠️ Instalación
-
-### Requisitos Previos
-
-- [Rust](https://rustup.rs/) (estable)
-- [Node.js](https://nodejs.org/) (v18+)
-- Left 4 Dead 2 
+--- 
 
 ## 🎮 Uso
 
@@ -67,9 +74,11 @@
 ---
 
 ## 📝 Licencia y Contribuciones
+<div>
 
 Este proyecto es de código abierto bajo la licencia GNU GPLv3. Para más detalles sobre cómo colaborar, consulta nuestra Guía de Contribución.
----
+
+</div>
 
 ## 👤 Autor
 
