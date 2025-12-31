@@ -18,7 +18,19 @@
 </div>
 
 ---
+## 📸 Screenshots
 
+<div align="center">
+  <br>
+  <img src="./assets/mods4versus-library.png" width="100%" alt="Mods4Versus Main Library View">
+  <br><br>
+  
+  <p align="center">
+    <img src="./assets/mods4versus-selecting.png" width="45%" alt="Mod Selection Interface">
+    &nbsp; &nbsp;
+    <img src="./assets/mods4versus-success.png" width="45%" alt="Successful Merge Notification">
+  </p>
+</div>
 ## 📥 Download
 
 <div align="center">
@@ -41,22 +53,6 @@
 - 🖼️ **Visual Preview** — View thumbnails and metadata for every mod before merging.
 
 ---
-
-## 📸 Screenshots
-
-<div align="center">
-  <br>
-  <img src="./assets/mods4versus-library.png" width="100%" alt="Mods4Versus Main Library View">
-  <br><br>
-  
-  <p align="center">
-    <img src="./assets/mods4versus-selecting.png" width="45%" alt="Mod Selection Interface">
-    &nbsp; &nbsp;
-    <img src="./assets/mods4versus-success.png" width="45%" alt="Successful Merge Notification">
-  </p>
-</div>
-
---- 
 
 ## 🎮 How to Use
 
