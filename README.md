@@ -2,90 +2,93 @@
 
 <div align="center">
 
+
 ![Tauri](https://img.shields.io/badge/Tauri-v2-24C8D8?style=for-the-badge&logo=tauri&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Left 4 Dead 2](https://img.shields.io/badge/Left%204%20Dead%202-171A21?style=for-the-badge&logo=steam&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-**Un gestor de mods nativo para Left 4 Dead 2**
+**Native Left 4 Dead 2 VPK Merger & Mod Manager**
 
-*Cambia fácilmente toda clase de Mods para poder jugarlos en Versus sin tener que copiar y pegar carpetas y sin usar el vkp.exe o instalar nada extra*
+*Play your favorite Workshop mods in Versus mode without file conflicts. Automatically merges VPKs and patches game configurations—no external tools needed.*
 
 </div>
 
 ---
 
-## 📥 Descargar
+## 📥 Download
 
 <div align="center">
 
-| Versión | Descripción | Enlace |
+| Version | Description | Link |
 |---------|-------------|--------|
-| **Installer** | Instalador con acceso directo y desinstalador | [⬇️ Descargar Setup](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/Mods4Versus_1.0.0_x64-setup.exe) |
-| **Portable** | Versión portable (Ejecuta sin instalar) | [⬇️ Descargar Portable](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/mods4versus_portable.exe) |
+| **Installer** | Full Windows setup with shortcut & uninstaller | [⬇️ Download Setup](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/Mods4Versus_1.0.0_x64-setup.exe) |
+| **Portable** | Standalone executable (No installation required) | [⬇️ Download Portable](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/mods4versus_portable.exe) |
 
 </div>
 
 ---
 
-## ✨ Características
+## ✨ Key Features
 
-- 🚀 **Rendimiento Nativo** — Construido con Rust y Tauri v2
-- 🔄 **Auto-Reparación** — Configura automáticamente el entorno del juego al iniciar
-- 📦 **Fusión de Mods** — Combina múltiples VPKs en un solo archivo optimizado
-- 🖼️ **Vista Previa** — Muestra miniaturas e información de cada mod
-- ⚡ **Streaming en Tiempo Real** — Los mods aparecen instantáneamente mientras se escanean
+- 🚀 **Native Performance** — Built with **Rust** and **Tauri v2** for minimal resource usage.
+- 📦 **VPK Merging** — Combines multiple add-ons into a single optimized file to bypass server consistency checks.
+- 🔄 **Auto-Configuration** — Automatically detects your L4D2 installation and patches the environment.
+- ⚡ **Real-Time Streaming** — Instant visual feedback as mods are scanned and loaded.
+- 🖼️ **Visual Preview** — View thumbnails and metadata for every mod before merging.
 
 ---
 
-## 📸 Capturas
+## 📸 Screenshots
 
 <div align="center">
 
-*Próximamente...*
+*(Screenshots coming soon...)*
 
 </div>
 
 --- 
 
-## 🎮 Uso
+## 🎮 How to Use
 
-1. **Iniciar la aplicación** — Los mods del Workshop se escanean automáticamente
-2. **Seleccionar mods** — Haz clic para seleccionar los mods a fusionar
-3. **Fusionar** — Presiona el botón "FUSIONAR" para combinarlos
-4. **¡Listo!** — El VPK fusionado se coloca en la carpeta `mods/` del juego. Ya se puede jugar.
+1. **Launch** — The app automatically scans your Steam Workshop folder.
+2. **Select** — Click on the mods you want to enable for Versus.
+3. **Merge** — Hit the "MERGE" button.
+4. **Play** — The tool places the merged VPK into your `mods/` folder and updates `gameinfo.txt`.
 
-> 💡 **Tip:** La aplicación inyecta automáticamente la ruta `Game mods` en `gameinfo.txt`, así que no necesitas configurar nada manualmente.
+> 💡 **Note:** Mods4Versus handles the `gameinfo.txt` injection automatically. You do not need to edit any text files manually.
 
 ---
 
-## 🔧 Stack Tecnológico
+## 🔧 Tech Stack
 
-| Componente | Tecnología |
+| Component | Technology |
 |------------|------------|
 | Framework | [Tauri v2](https://v2.tauri.app/) |
-| Backend | Rust |
-| Frontend | HTML5 / CSS3 / JavaScript |
-| Parsing VPK | Implementación propia + [valve_pak](https://crates.io/crates/valve_pak) |
-| Detección Steam | [steamlocate](https://crates.io/crates/steamlocate) |
+| Core Logic | Rust |
+| Frontend | HTML5, CSS3, JavaScript |
+| VPK Parsing | Custom implementation + [valve_pak](https://crates.io/crates/valve_pak) |
+| Path Detection | [steamlocate](https://crates.io/crates/steamlocate) |
 
 ---
 
-## 📝 Licencia y Contribuciones
+## 📝 License
+
 <div>
 
-Este proyecto es de código abierto bajo la licencia GNU GPLv3. Para más detalles sobre cómo colaborar, consulta nuestra Guía de Contribución.
+This project is open-source under the **GNU GPLv3** license. Contributions are welcome! 
+
+Please read our [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 </div>
-
-## 👤 Autor
-
-**Kublay**
 
 ---
 
 <div align="center">
 
-*Hecho a base de F1 y Baje de Pepa para la comunidad de Left 4 Dead 2*
+*Crafted for the Left 4 Dead 2 Community*
 
 </div>
