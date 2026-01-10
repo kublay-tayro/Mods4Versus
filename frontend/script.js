@@ -54,12 +54,15 @@ async function checkForUpdates() {
                     } else if (event.event === 'Finished') {
                         console.log("Download finished, installing...");
                         showInstallingState();
+                        // DEADLOCK FIX:
+                        // The installer waits for the app to close.
+                        // We must exit NOW, but give the backend a moment to spawn the installer.
+                        setTimeout(async () => {
+                            const { exit } = window.__TAURI__.process;
+                            await exit(0);
+                        }, 1500);
                     }
                 });
-
-                // Restart the app after install
-                const { relaunch } = window.__TAURI__.process;
-                await relaunch();
             }
         } else {
             console.log("No updates available");

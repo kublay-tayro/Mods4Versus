@@ -30,8 +30,8 @@ ${StrLoc}
 
 !define MANUFACTURER "Kublay Tayro"
 !define PRODUCTNAME "Mods4Versus"
-!define VERSION "1.1.0"
-!define VERSIONWITHBUILD "1.1.0.0"
+!define VERSION "1.2.1"
+!define VERSIONWITHBUILD "1.2.1.0"
 !define HOMEPAGE ""
 !define INSTALLMODE "perMachine"
 !define LICENSE ""
@@ -438,7 +438,7 @@ FunctionEnd
 !insertmacro MUI_UNPAGE_INSTFILES
 
 ;Languages
-!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "Spanish"
 !insertmacro MUI_RESERVEFILE_LANGDLL
   !include "C:\Mods4Versus\src-tauri\target\release\nsis\x64\English.nsh"
 

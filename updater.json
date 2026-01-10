@@ -1,10 +1,10 @@
 {
     "version":  "1.2.1",
-    "notes":  "Auto-update added. Author name fixed. Custom titlebar. Donate/Contact buttons.",
-    "pub_date":  "2026-01-10T11:33:16Z",
+    "notes":  "Actualización automática añadida. Nombre del autor corregido. Barra de título personalizada.",
+    "pub_date":  "2026-01-10T12:45:34Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "ZFc1MGNuVnpkR1ZrSUdOdmJXMWxiblE2SUhOcFoyNWhkSFZ5WlNCbWNtOXRJSFJoZFhKcElITmxZM0psZENCclpYa0tVbFZUUTA1SlMwbzBSREZWVERZd1RqRTBaalExV0ZNdk0yOVJjRmM0UjNGRFMwTkdPVWhPTWpOWFNYaEVibWM1U3pOcldURldNMjV0WVZSTVFTdHFLMEZwVTFCaGMxWlFlalJvZG5relkwSk5ZWGhNVW5rd2JURkNSbEJGTkRCTWIwRTRQUXAwY25WemRHVmtJR052YlcxbGJuUTZJSFJwYldWemRHRnRjRG94TnpZNE1EWXlOelUzQ1dacGJHVTZUVzlrY3pSV1pYSnpkWE5mTVM0eUxqRmZlRFkwTFhObGRIVndMbVY0WlFwaGVXaEtORTh2V0d4NVkxTTJlbmhhU21SSWNWVllXRFppVkhvclpHZG1lamRFVFRSeGFqaE5MMVUyTTB4eVpVb3dSRFJ4UjFWRmJucHFlRzQxTVVrNVVVUjFTQ3RMY1ZWSlZVWm5ibWszWWt0V1FtVkVVVDA5Q2c9PQ==",
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTQ05JS0o0RDFVTDV0ckh2QUtqekpvSDkvV1MzcjYrU2N5Y1MrTlRCcmludlI0dEo1cnpRU1BHMFVXdTlClZ1N4cERJQWNYZWt0WUdxV0VMZUc2dFJ5U3BMRTdXOUlqMGR6cVJzSmZ3TEVLYjU0MEtEUk04cVl0NGlPb3RkM3dMbVpaWGtvN3R0SS9YR2hTT05Edz09Cg==dXNfMS4yLjFfeDY0LXNldHVwLmV4ZQpl",
                                              "url":  "https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.1/Mods4Versus_1.2.1_x64-setup.exe"
                                          }
                   }
