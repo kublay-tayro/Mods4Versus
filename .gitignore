@@ -77,6 +77,11 @@ Session.vim
 .env.*.local
 !.env.example
 
+# Tauri signing keys (NEVER commit these!)
+*.key
+*.key.pub
+*.sig
+
 # ============ Logs & Debug ============
 *.log
 npm-debug.log*

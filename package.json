@@ -1,6 +1,7 @@
 {
     "name": "mods4versus",
-    "version": "0.1.0",
+    "version": "1.1.0",
+    "author": "Kublay Tayro",
     "description": "L4D2 Mod Manager",
     "scripts": {
         "tauri": "tauri",
