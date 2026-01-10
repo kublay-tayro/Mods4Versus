@@ -37,8 +37,7 @@
 
 | Version | Description | Link |
 |---------|-------------|--------|
-| **Installer** | Full Windows setup with shortcut & uninstaller | [⬇️ Download Setup](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/Mods4Versus_1.0.0_x64-setup.exe) |
-| **Portable** | Standalone executable (No installation required) | [⬇️ Download Portable](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.0.0/mods4versus_portable.exe) |
+| **latest (v1.2.0)** | Auto-Updating Windows Setup | [⬇️ Download Installer](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.0/Mods4Versus_1.2.0_x64-setup.exe) |
 
 </div>
 
