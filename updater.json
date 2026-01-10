@@ -1,11 +1,11 @@
 {
-    "version":  "1.2.0",
+    "version":  "1.2.1",
     "notes":  "Actualización automática añadida. Nombre del autor corregido. Barra de título personalizada.",
-    "pub_date":  "2026-01-10T12:45:34Z",
+    "pub_date":  "2026-01-10T13:26:04Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTQ05JS0o0RDFVTDJXME1TZFViM1JNYnFiRFRhd3gvZjZXRW5YdzVjWEUrWE9EWGY0YXl5WUhjMHV3eENOQ1VVU1JoK1Bhdi83cGFaMFJDVTl0OG5GTVXUnhiaXNOUERsS2VrQnRQb1JoaTZoRWUrSlhWV1RXVGNPTnd6SUJjK1FEUE5HODNsL2pCdGhRSTU0a1VCUT09Cg==dXNfMS4yLjBfeDY0LXNldHVwLmV4ZQpC",
-                                             "url":  "https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.0/Mods4Versus_1.2.0_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTQ05JS0o0RDFVTDV0ckh2QUtqekpvSDkvV1MzcjYrU2N5Y1MrTlRCcmludlI0dEo1cnpRU1BHMFVXdTlClZ1N4cERJQWNYZWt0WUdxV0VMZUc2dFJ5U3BMRTdXOUlqMGR6cVJzSmZ3TEVLYjU0MEtEUk04cVl0NGlPb3RkM3dMbVpaWGtvN3R0SS9YR2hTT05Edz09Cg==dXNfMS4yLjFfeDY0LXNldHVwLmV4ZQpl",
+                                             "url":  "https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.1/Mods4Versus_1.2.1_x64-setup.exe"
                                          }
                   }
 }

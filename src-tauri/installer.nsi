@@ -30,8 +30,8 @@ ${StrLoc}
 
 !define MANUFACTURER "Kublay Tayro"
 !define PRODUCTNAME "Mods4Versus"
-!define VERSION "1.2.1"
-!define VERSIONWITHBUILD "1.2.1.0"
+!define VERSION "1.2.0"
+!define VERSIONWITHBUILD "1.2.0.0"
 !define HOMEPAGE ""
 !define INSTALLMODE "perMachine"
 !define LICENSE ""
