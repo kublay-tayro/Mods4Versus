@@ -1,11 +1,11 @@
 {
-    "version":  "1.2.0",
+    "version":  "1.2.1",
     "notes":  "Auto-update added. Author name fixed. Custom titlebar. Donate/Contact buttons.",
-    "pub_date":  "2026-01-10T10:14:54Z",
+    "pub_date":  "2026-01-10T11:33:16Z",
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "ZFc1MGNuVnpkR1ZrSUdOdmJXMWxiblE2SUhOcFoyNWhkSFZ5WlNCbWNtOXRJSFJoZFhKcElITmxZM0psZENCclpYa0tVbFZUUTA1SlMwbzBSREZWVERSb2MySnBWVGxDUlVWa2RYSTRkSGxVT1RjcmJtOUdNM2RSV0dZeVdrNVBlVTFEV1dsRkt6WnhZV2tyTVdGM1NrSTVORVJySzBSaFlubDBORTFKZEhRMGMxWnFTRFF6UmxWbk5GVjNSWEZRTVZaNWNVRmpQUXAwY25WemRHVmtJR052YlcxbGJuUTZJSFJwYldWemRHRnRjRG94TnpZNE1EWXdOVE13Q1dacGJHVTZUVzlrY3pSV1pYSnpkWE5mTVM0eUxqQmZlRFkwTFhObGRIVndMbVY0WlFwUlJqSXJiV3c1VjJOMVRuQnJiR1IwWkZwblVWTXdaM1JPZEVnellWVldRVGxPTld0elkzcFJaM2xxVG5aUlQzaFdhV2hoUVRSVFNEWm9SRnBPUWtSNWFuSlJjVkJCUnpoVVRuRkpUbXQzY0ZoemJTdERkejA5Q2c9PQ==",
-                                             "url":  "https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.0/Mods4Versus_1.2.0_x64-setup.exe"
+                                             "signature":  "ZFc1MGNuVnpkR1ZrSUdOdmJXMWxiblE2SUhOcFoyNWhkSFZ5WlNCbWNtOXRJSFJoZFhKcElITmxZM0psZENCclpYa0tVbFZUUTA1SlMwbzBSREZWVERZd1RqRTBaalExV0ZNdk0yOVJjRmM0UjNGRFMwTkdPVWhPTWpOWFNYaEVibWM1U3pOcldURldNMjV0WVZSTVFTdHFLMEZwVTFCaGMxWlFlalJvZG5relkwSk5ZWGhNVW5rd2JURkNSbEJGTkRCTWIwRTRQUXAwY25WemRHVmtJR052YlcxbGJuUTZJSFJwYldWemRHRnRjRG94TnpZNE1EWXlOelUzQ1dacGJHVTZUVzlrY3pSV1pYSnpkWE5mTVM0eUxqRmZlRFkwTFhObGRIVndMbVY0WlFwaGVXaEtORTh2V0d4NVkxTTJlbmhhU21SSWNWVllXRFppVkhvclpHZG1lamRFVFRSeGFqaE5MMVUyTTB4eVpVb3dSRFJ4UjFWRmJucHFlRzQxTVVrNVVVUjFTQ3RMY1ZWSlZVWm5ibWszWWt0V1FtVkVVVDA5Q2c9PQ==",
+                                             "url":  "https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.1/Mods4Versus_1.2.1_x64-setup.exe"
                                          }
                   }
 }
