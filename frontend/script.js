@@ -53,19 +53,12 @@ async function checkForUpdates() {
                         updateDownloadProgress(downloadedBytes, totalBytes);
                     } else if (event.event === 'Finished') {
                         console.log("Download finished, installing...");
-                        // Use IIFE or just call without await since we are in a non-async callback (or make parent async)
-                        // Actually parent callback of downloadAndInstall IS async in typical Tauri usage, but let's be safe.
-                        window.__TAURI__.dialog.message('Download Completed! Attempting to close app in 1.5s...', { title: 'Debug', type: 'info' }).then(() => {
-                            showInstallingState();
-                            setTimeout(async () => {
-                                try {
-                                    const { exit } = window.__TAURI__.process;
-                                    await exit(0);
-                                } catch (e) {
-                                    window.__TAURI__.dialog.message('EXIT FAILED: ' + e, { title: 'Error', type: 'error' });
-                                }
-                            }, 1500);
-                        });
+                        showInstallingState();
+                        // Give the backend a moment to spawn the installer before exiting
+                        setTimeout(async () => {
+                            const { exit } = window.__TAURI__.process;
+                            await exit(0);
+                        }, 1500);
                     }
                 });
             }
