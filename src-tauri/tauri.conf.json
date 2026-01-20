@@ -56,7 +56,7 @@
     "plugins": {
         "updater": {
             "active": true,
-            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDJGNTQzREUwODk4MjM0ODIKUldTQ05JS0o0RDFVTDhmRGJmYWJaSG95R043ZTRYdm5lcXJjM2hIdDRYT1hOaGJtT0dxbmxkSzkK",
+            "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEM2QjRDM0FGNTM2QjdGQzEKUldUQmYydFRyOE8weGt2bE05YUZDVzg4R2k0eERFRDFXb1FuZlNzb2lTZFZuc0VhVXJXeDhCMFoK",
             "endpoints": [
                 "https://raw.githubusercontent.com/kublay-tayro/Mods4Versus/main/updater.json"
             ]
