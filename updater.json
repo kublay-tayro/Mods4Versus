@@ -1,7 +1,7 @@
 {
     "version": "1.2.1",
-    "notes": "Añadido botón Restaurar para eliminar mods fusionados. Mejoras de estabilidad.",
-    "pub_date": "2026-01-20T09:30:00Z",
+    "notes": "Añadido botón Restaurar para eliminar mods fusionados. Mejoras de estabilidad. (Permisos de actualización corregidos)",
+    "pub_date": "2026-01-20T10:15:00Z",
     "platforms": {
         "windows-x86_64": {
             "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTQ05JS0o0RDFVTDV0ckh2QUtqekpvSDkvV1MzcjYrU2N5Y1MrTlRCcmludlI0dEo1cnpRU1BHMFVXdTlCV2xMbmlWVFhoYXlYVy9XaGlSUzZ1bkZrNUgvQ0xHeXh4NUFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4MDY3MDgxCWZpbGU6TW9kczRWZXJzdXNfMS4yLjFfeDY0LXNldHVwLmV4ZQplZ1N4cERJQWNYZWt0WUdxV0VMZUc2dFJ5U3BMRTdXOUlqMGR6cVJzSmZ3TEVLYjU0MEtEUk04cVl0NGlPb3RkM3dMbVpaWGtvN3R0SS9YR2hTT05Edz09Cg==",
