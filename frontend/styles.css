@@ -552,6 +552,85 @@ dialog::backdrop {
     text-decoration: underline;
 }
 
+/* --- FOOTER BUTTONS CONTAINER --- */
+#footer-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* --- RESTORE BUTTON --- */
+.btn-restore {
+    background: transparent;
+    border: 2px solid #ff9800;
+    color: #ff9800;
+    padding: 10px 30px;
+    font-size: 24px;
+    font-family: 'MenuFont', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    clip-path: none;
+}
+
+.btn-restore:hover {
+    background: #ff9800;
+    color: #000;
+}
+
+/* --- RESTORE DIALOG --- */
+#restore-dialog {
+    border-color: #ff9800;
+}
+
+#restore-dialog .dialog-title {
+    color: #ff9800;
+}
+
+.restore-text {
+    color: #ccc;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.restore-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-confirm-restore {
+    background: #ff9800;
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-family: 'MenuFont', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+    clip-path: none;
+}
+
+.btn-confirm-restore:hover {
+    background: #ffb74d;
+}
+
+.btn-cancel-restore {
+    background: #333;
+    color: #aaa;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-family: 'MenuFont', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+    clip-path: none;
+}
+
+.btn-cancel-restore:hover {
+    background: #555;
+    color: #fff;
+}
+
 .version-badge {
     position: fixed;
     bottom: 10px;

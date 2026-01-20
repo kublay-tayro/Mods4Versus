@@ -60,11 +60,14 @@
 
         <div id="footer">
             <div id="status">Esperando órdenes...</div>
-            <button id="btn-fusion">FUSIONAR</button>
+            <div id="footer-buttons">
+                <button id="btn-restore" class="btn-restore">RESTAURAR</button>
+                <button id="btn-fusion">FUSIONAR</button>
+            </div>
         </div>
     </div>
 
-    <div class="version-badge">v1.2.0</div>
+    <div class="version-badge">v1.2.1</div>
 
     <!-- Audio Elements -->
     <audio id="sound-click" src="menu_click01.wav" preload="auto"></audio>
@@ -125,6 +128,16 @@
             <a href="mailto:kublay.tayro@gmail.com" class="contact-email">kublay.tayro@gmail.com</a>
         </div>
         <button class="btn-close-dialog" id="btn-close-contact">CERRAR</button>
+    </dialog>
+
+    <!-- Restore Confirmation Dialog -->
+    <dialog id="restore-dialog">
+        <div class="dialog-title">⚠️ RESTAURAR JUEGO</div>
+        <div class="restore-text">¿Deseas eliminar los mods fusionados?</div>
+        <div class="restore-buttons">
+            <button class="btn-confirm-restore" id="btn-confirm-restore">SÍ, ELIMINAR</button>
+            <button class="btn-cancel-restore" id="btn-cancel-restore">CANCELAR</button>
+        </div>
     </dialog>
 
     <!-- Update Available Dialog -->

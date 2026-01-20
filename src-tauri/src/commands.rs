@@ -240,6 +240,25 @@ fn parse_addon_title(content: &str) -> Option<String> {
     None
 }
 
+/// Deletes the merged VPK file to restore the original game.
+///
+/// This removes pak01_dir.vpk from the mods folder.
+#[tauri::command]
+pub fn delete_mods() -> Result<MergeResult, String> {
+    let mods_path = get_mods_path();
+    let vpk_path = mods_path.join(format!("{}.vpk", TEMP_NAME));
+
+    if vpk_path.exists() {
+        fs::remove_file(&vpk_path)
+            .map_err(|e| format!("Error eliminando VPK: {}", e))?;
+        
+        println!("[OK] Mods eliminados: {:?}", vpk_path);
+        Ok(MergeResult::ok("¡Mods eliminados correctamente!\nEl juego ha sido restaurado a su estado original."))
+    } else {
+        Ok(MergeResult::ok("No hay mods fusionados para eliminar."))
+    }
+}
+
 /// Merges multiple VPK mods into a single pak01_dir.vpk file.
 ///
 /// Process:

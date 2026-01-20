@@ -348,6 +348,23 @@ async function iniciarFusion() {
     btn.disabled = false;
 }
 
+async function restaurarMods() {
+    // Play click sound
+    document.getElementById('sound-click').play().catch(() => { });
+
+    try {
+        const result = await invoke('delete_mods', {});
+
+        if (result.status === 'ok') {
+            mostrarModal("RESTAURACIÓN COMPLETADA", result.msg);
+        } else {
+            mostrarModal("ERROR", result.msg, true);
+        }
+    } catch (err) {
+        mostrarModal("ERROR CRÍTICO", err.toString(), true);
+    }
+}
+
 // --- INITIALIZATION ---
 window.addEventListener('DOMContentLoaded', async function () {
     try {
@@ -432,6 +449,33 @@ window.addEventListener('DOMContentLoaded', async function () {
             btnCloseContact.addEventListener('click', () => {
                 document.getElementById('sound-complete').play().catch(() => { });
                 contactDialog.close();
+            });
+        }
+
+        // Restore button and dialog
+        const btnRestore = document.getElementById('btn-restore');
+        const restoreDialog = document.getElementById('restore-dialog');
+        const btnConfirmRestore = document.getElementById('btn-confirm-restore');
+        const btnCancelRestore = document.getElementById('btn-cancel-restore');
+
+        if (btnRestore && restoreDialog) {
+            btnRestore.addEventListener('click', () => {
+                document.getElementById('sound-click').play().catch(() => { });
+                restoreDialog.showModal();
+            });
+        }
+
+        if (btnConfirmRestore && restoreDialog) {
+            btnConfirmRestore.addEventListener('click', () => {
+                restoreDialog.close();
+                restaurarMods();
+            });
+        }
+
+        if (btnCancelRestore && restoreDialog) {
+            btnCancelRestore.addEventListener('click', () => {
+                document.getElementById('sound-complete').play().catch(() => { });
+                restoreDialog.close();
             });
         }
 

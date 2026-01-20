@@ -9,7 +9,7 @@ mod mod_types;
 mod paths;
 mod vpk_utils;
 
-use commands::{get_mods, merge_mods, verify_and_repair_environment};
+use commands::{delete_mods, get_mods, merge_mods, verify_and_repair_environment};
 
 fn main() {
     // Run self-healing on startup (silently handle errors)
@@ -26,7 +26,8 @@ fn main() {
             verify_and_repair_environment,
             get_mods,
             merge_mods,
-            get_donation_qr, // Expose the new command
+            delete_mods,
+            get_donation_qr,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
