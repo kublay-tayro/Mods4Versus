@@ -37,7 +37,7 @@
 
 | Version | Description | Link |
 |---------|-------------|--------|
-| **latest (v1.2.0)** | Auto-Updating Windows Setup | [⬇️ Download Installer](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.0/Mods4Versus_1.2.0_x64-setup.exe) |
+| **latest (v1.2.1)** | Auto-Updating Windows Setup | [⬇️ Download Installer](https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.1/Mods4Versus_1.2.1_x64-setup.exe) |
 
 </div>
 
