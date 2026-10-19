@@ -46,7 +46,6 @@
         "targets": "nsis",
         "windows": {
             "nsis": {
-                "template": "installer.nsi",
                 "installMode": "perMachine",
                 "sidebarImage": "icons/installer-sidebar.bmp",
                 "headerImage": "icons/installer-header.bmp"
