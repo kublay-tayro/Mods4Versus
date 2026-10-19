@@ -1,11 +1,11 @@
 {
-    "version": "1.2.1",
-    "notes": "Añadido botón Restaurar para eliminar mods fusionados. Mejoras de estabilidad.",
-    "pub_date": "2026-01-20T10:45:00Z",
+    "version": "1.2.0",
+    "notes": "Auto-update added. Author name fixed. Custom titlebar. Donate/Contact buttons.",
+    "pub_date": "2026-01-10T10:14:54Z",
     "platforms": {
         "windows-x86_64": {
-            "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQmYydFRyOE8weGdKc1had2xLS1RmaTFNc0NHbG5oc0VuTjE3TzBTSXovV0pZZGZUSHNXTGlidmI0VmVvMjFzc0c3QkJ5dVFJSTR4Y2tFZWM3Z29PN2pkLzE4Tkt5S2drPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4OTI0OTcxCWZpbGU6TW9kczRWZXJzdXNfMS4yLjFfeDY0LXNldHVwLmV4ZQpUR3JKVmtIMlhObnEza0NLM2VDaGRBU08wSjdDQnI3blloMUlMVXVZcUZIVmtJd1VwbUd4VDh3RkFnbHBpb1lzWjRQbFBSMEoyclhJYm9lSHAzWUNDdz09Cg==",
-            "url": "https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.1/Mods4Versus_1.2.1_x64-setup.exe"
+            "signature": "ZFc1MGNuVnpkR1ZrSUdOdmJXMWxiblE2SUhOcFoyNWhkSFZ5WlNCbWNtOXRJSFJoZFhKcElITmxZM0psZENCclpYa0tVbFZUUTA1SlMwbzBSREZWVERSb2MySnBWVGxDUlVWa2RYSTRkSGxVT1RjcmJtOUdNM2RSV0dZeVdrNVBlVTFEV1dsRkt6WnhZV2tyTVdGM1NrSTVORVJySzBSaFlubDBORTFKZEhRMGMxWnFTRFF6UmxWbk5GVjNSWEZRTVZaNWNVRmpQUXAwY25WemRHVmtJR052YlcxbGJuUTZJSFJwYldWemRHRnRjRG94TnpZNE1EWXdOVE13Q1dacGJHVTZUVzlrY3pSV1pYSnpkWE5mTVM0eUxqQmZlRFkwTFhObGRIVndMbVY0WlFwUlJqSXJiV3c1VjJOMVRuQnJiR1IwWkZwblVWTXdaM1JPZEVnellWVldRVGxPTld0elkzcFJaM2xxVG5aUlQzaFdhV2hoUVRSVFNEWm9SRnBPUWtSNWFuSlJjVkJCUnpoVVRuRkpUbXQzY0ZoemJTdERkejA5Q2c9PQ==",
+            "url": "https://github.com/kublay-tayro/Mods4Versus/releases/download/v1.2.0/Mods4Versus_1.2.0_x64-setup.exe"
         }
     }
 }

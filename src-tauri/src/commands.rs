@@ -35,6 +35,13 @@ pub fn verify_and_repair_environment() -> Result<(), String> {
 
     // 2. Inject 'Game mods' into gameinfo.txt
     let gameinfo_path = get_gameinfo_path();
+    if !gameinfo_path.exists() {
+        let backup_path = gameinfo_path.with_extension("txt.bak");
+        if backup_path.exists() {
+            println!("gameinfo.txt no encontrado, restaurando desde backup...");
+            let _ = fs::copy(&backup_path, &gameinfo_path);
+        }
+    }
     if gameinfo_path.exists() {
         inject_game_mods_line(&gameinfo_path)?;
     }

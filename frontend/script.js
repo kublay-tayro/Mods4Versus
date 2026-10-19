@@ -280,11 +280,16 @@ function addModToGrid(mod) {
     const img = document.createElement('img');
     img.loading = 'lazy';
     img.decoding = 'async';
+    const DEFAULT_THUMB = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%231a1a1a'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%23777' font-family='sans-serif' font-size='32'%3E%F0%9F%A7%9F%3C/text%3E%3Ctext x='50%25' y='75%25' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-family='sans-serif' font-size='11'%3EL4D2 MOD%3C/text%3E%3C/svg%3E";
+    img.onerror = () => {
+        img.onerror = null;
+        img.src = DEFAULT_THUMB;
+    };
     if (mod.image_path) {
         const url = convertFileSrc(mod.image_path);
         img.src = url;
     } else {
-        img.src = 'https://via.placeholder.com/150/333/fff?text=No+Img';
+        img.src = DEFAULT_THUMB;
     }
 
     // Create title div
