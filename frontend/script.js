@@ -331,22 +331,56 @@ async function iniciarFusion() {
     // Mostrar modal de carga
     mostrarLoading();
 
+    // Analíticas: inicio de fusión
+    const mergeStartTime = Date.now();
+    const selectedList = Array.from(selectedIDs);
+    if (window.Analytics) Analytics.track('vpk_merge_started', {
+        mod_count: selectedList.length,
+        mod_ids: selectedList,
+    });
+
     try {
-        const result = await invoke('merge_mods', { ids: Array.from(selectedIDs) });
+        const result = await invoke('merge_mods', { ids: selectedList });
 
         // Cerrar loading antes de mostrar resultado
         cerrarLoading();
 
+        // Analíticas: duración del procesamiento
+        const durationMs = Date.now() - mergeStartTime;
+        if (window.Analytics) Analytics.track('vpk_processing_duration', {
+            duration_ms: durationMs,
+            mod_count: selectedList.length,
+        });
+
         if (result.status === 'ok') {
+            // Analíticas: fusión exitosa
+            if (window.Analytics) Analytics.track('vpk_merge_success', {
+                mod_count: selectedList.length,
+                duration_ms: durationMs,
+            });
             mostrarModal("PROCESO COMPLETADO", result.msg);
             btn.innerText = "FUSIONAR";
             selectedIDs.clear();
             document.querySelectorAll('.card.selected').forEach(el => el.classList.remove('selected'));
         } else {
+            // Analíticas: fusión con error (resultado del backend)
+            if (window.Analytics) Analytics.track('vpk_merge_error', {
+                mod_count: selectedList.length,
+                error_type: 'backend_error',
+            });
             mostrarModal("ERROR CRÍTICO", result.msg, true);
         }
     } catch (err) {
         cerrarLoading();
+        // Analíticas: error inesperado en la fusión
+        if (window.Analytics) Analytics.track('vpk_merge_error', {
+            mod_count: selectedList.length,
+            error_type: 'exception',
+        });
+        if (window.Analytics) Analytics.track('app_error', {
+            error_type: 'vpk_merge_exception',
+            context: 'iniciarFusion',
+        });
         mostrarModal("ERROR CRÍTICO", err.toString(), true);
     }
 
@@ -376,6 +410,9 @@ window.addEventListener('DOMContentLoaded', async function () {
         // Setup window controls
         await setupWindowControls();
 
+        // Inicializar analíticas (activadas por defecto — modelo opt-out con opción de desactivación)
+        if (window.Analytics) await Analytics.init();
+
         // Check for updates after a short delay (non-blocking)
         setTimeout(() => {
             checkForUpdates();
@@ -403,6 +440,8 @@ window.addEventListener('DOMContentLoaded', async function () {
                     }
                 }
                 document.getElementById('status').innerText = `Escaneo completado. ${count} mods encontrados.`;
+                // Analíticas: escaneo completado
+                if (window.Analytics) Analytics.track('mods_scan', { mod_count: count });
             });
         } else {
             console.error("Tauri Event system not found");
@@ -457,6 +496,36 @@ window.addEventListener('DOMContentLoaded', async function () {
             });
         }
 
+        // Settings button and dialog
+        const btnSettings = document.getElementById('btn-settings');
+        const settingsDialog = document.getElementById('settings-dialog');
+        const btnCloseSettings = document.getElementById('btn-close-settings');
+        const chkAnalytics = document.getElementById('chk-analytics');
+
+        if (chkAnalytics && window.Analytics) {
+            chkAnalytics.checked = Analytics.hasConsent();
+            chkAnalytics.addEventListener('change', (e) => {
+                Analytics.setConsent(e.target.checked);
+            });
+        }
+
+        if (btnSettings && settingsDialog) {
+            btnSettings.addEventListener('click', () => {
+                document.getElementById('sound-click').play().catch(() => { });
+                if (chkAnalytics && window.Analytics) {
+                    chkAnalytics.checked = Analytics.hasConsent();
+                }
+                settingsDialog.showModal();
+            });
+        }
+
+        if (btnCloseSettings && settingsDialog) {
+            btnCloseSettings.addEventListener('click', () => {
+                document.getElementById('sound-complete').play().catch(() => { });
+                settingsDialog.close();
+            });
+        }
+
         // Restore button and dialog
         const btnRestore = document.getElementById('btn-restore');
         const restoreDialog = document.getElementById('restore-dialog');
@@ -496,9 +565,21 @@ window.addEventListener('DOMContentLoaded', async function () {
             if (selectedIDs.has(id)) {
                 selectedIDs.delete(id);
                 card.classList.remove('selected');
+                // Analíticas: mod deseleccionado
+                if (window.Analytics) Analytics.track('mod_deselected', {
+                    mod_id: id,
+                    mod_title: card.querySelector('.card-title')?.textContent || '',
+                    total_selected: selectedIDs.size,
+                });
             } else {
                 selectedIDs.add(id);
                 card.classList.add('selected');
+                // Analíticas: mod seleccionado
+                if (window.Analytics) Analytics.track('mod_selected', {
+                    mod_id: id,
+                    mod_title: card.querySelector('.card-title')?.textContent || '',
+                    total_selected: selectedIDs.size,
+                });
             }
 
             updateSelectionUI();

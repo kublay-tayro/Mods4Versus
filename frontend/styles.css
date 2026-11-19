@@ -527,6 +527,33 @@ dialog::backdrop {
     height: 20px;
 }
 
+/* --- SETTINGS BUTTON --- */
+.btn-settings {
+    background: transparent;
+    border: 2px solid #888;
+    color: #aaa;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: 'MenuFont', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    clip-path: none;
+    margin-left: 10px;
+}
+
+.btn-settings:hover {
+    background: #888;
+    color: #000;
+}
+
+.btn-settings svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* --- CONTACT DIALOG --- */
 .contact-info {
     margin: 20px 0;
@@ -550,6 +577,52 @@ dialog::backdrop {
 .contact-email:hover {
     color: #00bcd4;
     text-decoration: underline;
+}
+
+/* --- SETTINGS DIALOG --- */
+#settings-dialog {
+    border-color: #888;
+    max-width: 440px;
+}
+
+#settings-dialog .dialog-title {
+    color: #ccc;
+}
+
+.settings-content {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #eee;
+    user-select: none;
+}
+
+.setting-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #cc0000;
+    cursor: pointer;
+}
+
+.setting-label {
+    font-family: 'MenuFont', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.setting-description {
+    color: #888;
+    font-size: 13px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    margin-top: 12px;
+    padding-left: 32px;
 }
 
 /* --- FOOTER BUTTONS CONTAINER --- */

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mods4Versus — Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── Login ───────────────────────────────────────────────────────────────── -->
+<div id="login-overlay">
+    <div class="login-card">
+        <h1>📊 Analytics</h1>
+        <p>Mods4Versus · Dashboard privado</p>
+        <form id="login-form">
+            <input type="password" id="login-token" placeholder="Dashboard secret…"
+                   autocomplete="current-password"
+                   style="width:100%;padding:10px 14px;border-radius:6px;border:1px solid var(--border);
+                          background:var(--bg-input);color:var(--text);font-size:14px;margin-bottom:12px">
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+                Acceder
+            </button>
+        </form>
+        <div id="login-error" class="login-error"></div>
+    </div>
+</div>
+
+<!-- ── App ─────────────────────────────────────────────────────────────────── -->
+<div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <span>KUBLAY'S</span>
+            <strong>MODS4VERSUS</strong>
+        </div>
+
+        <nav>
+            <div class="nav-item active" data-section="overview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                Resumen
+            </div>
+            <div class="nav-item" data-section="users">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Usuarios activos
+            </div>
+            <div class="nav-item" data-section="installs">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Instalaciones
+            </div>
+            <div class="nav-item" data-section="mods">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+                Mods
+            </div>
+            <div class="nav-item" data-section="geo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Geografía
+            </div>
+            <div class="nav-item" data-section="versions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                Versiones
+            </div>
+            <div class="nav-item" data-section="retention">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                Retención
+            </div>
+            <div class="nav-item" data-section="errors">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Errores
+            </div>
+            <div class="nav-item" data-section="sessions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Sesiones
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="btn-logout" class="btn btn-ghost" style="width:100%;justify-content:center">
+                Cerrar sesión
+            </button>
+        </div>
+    </aside>
+
+    <!-- Contenido -->
+    <main class="content">
+        <!-- Barra de filtros -->
+        <div class="top-bar">
+            <label>Desde</label>
+            <input type="date" id="date-from">
+            <label>Hasta</label>
+            <input type="date" id="date-to">
+            <button id="btn-apply" class="btn btn-primary">Aplicar</button>
+        </div>
+
+        <!-- Secciones -->
+        <div class="sections">
+
+            <!-- Resumen -->
+            <div class="section active" id="sec-overview">
+                <div class="section-title">Resumen general</div>
+                <div class="stats-grid" id="overview-stats">
+                    <div class="loading-row"><span class="spinner"></span> Cargando...</div>
+                </div>
+                <div class="chart-card">
+                    <h3>Usuarios activos diarios (período seleccionado)</h3>
+                    <div class="chart-wrap">
+                        <div id="overview-chart" class="loading-row"><span class="spinner"></span> Cargando...</div>
+                        <canvas id="chart-overview" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usuarios activos -->
+            <div class="section" id="sec-users">
+                <div class="section-title">Usuarios activos</div>
+                <div id="users-content"></div>
+            </div>
+
+            <!-- Instalaciones -->
+            <div class="section" id="sec-installs">
+                <div class="section-title">Nuevas instalaciones</div>
+                <div id="installs-content"></div>
+            </div>
+
+            <!-- Mods -->
+            <div class="section" id="sec-mods">
+                <div class="section-title">Mods más utilizados</div>
+                <div id="mods-content"></div>
+            </div>
+
+            <!-- Geografía -->
+            <div class="section" id="sec-geo">
+                <div class="section-title">Distribución geográfica</div>
+                <div id="geo-content"></div>
+            </div>
+
+            <!-- Versiones -->
+            <div class="section" id="sec-versions">
+                <div class="section-title">Versiones de la aplicación</div>
+                <div id="versions-content"></div>
+            </div>
+
+            <!-- Retención -->
+            <div class="section" id="sec-retention">
+                <div class="section-title">Retención de usuarios</div>
+                <div id="retention-content"></div>
+            </div>
+
+            <!-- Errores -->
+            <div class="section" id="sec-errors">
+                <div class="section-title">Errores y estadísticas VPK</div>
+                <div id="errors-content"></div>
+            </div>
+
+            <!-- Sesiones -->
+            <div class="section" id="sec-sessions">
+                <div class="section-title">Duración de sesiones</div>
+                <div id="sessions-content"></div>
+            </div>
+
+        </div><!-- /sections -->
+    </main>
+</div><!-- /app -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

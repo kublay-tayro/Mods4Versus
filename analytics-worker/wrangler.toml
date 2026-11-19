@@ -1,0 +1,43 @@
+# Mods4Versus Analytics — Configuración Wrangler
+# =================================================
+# Referencia: https://developers.cloudflare.com/workers/wrangler/configuration/
+#
+# ANTES DE DESPLEGAR:
+#   1. Crea la base de datos D1:
+#        wrangler d1 create mods4versus-analytics
+#   2. Copia el database_id que devuelve el comando y pégalo abajo.
+#   3. Aplica la migración:
+#        wrangler d1 migrations apply mods4versus-analytics
+#   4. Configura el secreto del dashboard:
+#        wrangler secret put DASHBOARD_SECRET
+#   5. Despliega:
+#        wrangler deploy
+#   6. Copia la URL del Worker desplegado y pégala en:
+#        - frontend/analytics.js  → constante ANALYTICS_WORKER_URL
+#        - analytics-dashboard/app.js → constante WORKER_BASE_URL
+#        - src-tauri/tauri.conf.json → reemplaza *.workers.dev por tu URL exacta
+
+name            = "mods4versus-analytics"
+main            = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# Base de datos D1
+[[d1_databases]]
+binding      = "DB"
+database_name = "mods4versus-analytics"
+database_id  = "ffde8174-5fc5-4c8f-af25-e77eae578844"
+migrations_dir = "migrations"
+
+# Variables de entorno no secretas (visibles en el código fuente — sin datos sensibles)
+[vars]
+APP_NAME = "Mods4Versus"
+
+# NOTA IMPORTANTE SOBRE SECRETOS:
+# DASHBOARD_SECRET se configura con el siguiente comando y NUNCA se añade aquí:
+#   wrangler secret put DASHBOARD_SECRET
+# Cloudflare almacena el secreto de forma cifrada y lo inyecta en env.DASHBOARD_SECRET.
+
+
+# Cron Triggers — Purga automática diaria de eventos anteriores a 90 días (03:00 UTC)
+[triggers]
+crons = ["0 3 * * *"]

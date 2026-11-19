@@ -52,6 +52,13 @@
                 </svg>
                 CONTACTO
             </button>
+            <button class="btn-settings" id="btn-settings" title="Configuración">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+                </svg>
+                AJUSTES
+            </button>
         </div>
 
         <div id="grid-container">
@@ -67,7 +74,7 @@
         </div>
     </div>
 
-    <div class="version-badge">v1.2.1</div>
+    <div class="version-badge">v1.2.2</div>
 
     <!-- Audio Elements -->
     <audio id="sound-click" src="menu_click01.wav" preload="auto"></audio>
@@ -130,6 +137,21 @@
         <button class="btn-close-dialog" id="btn-close-contact">CERRAR</button>
     </dialog>
 
+    <!-- Settings Dialog -->
+    <dialog id="settings-dialog">
+        <div class="dialog-title">⚙️ CONFIGURACIÓN</div>
+        <div class="settings-content">
+            <label class="setting-item" for="chk-analytics">
+                <input type="checkbox" id="chk-analytics" checked>
+                <span class="setting-label">Enviar estadísticas anónimas de uso</span>
+            </label>
+            <p class="setting-description">
+                Ayuda a mejorar Mods4Versus registrando métricas anónimas agregadas (frecuencia de uso, mods más seleccionados, tasa de éxito y errores de fusión VPK). No recopila nombres, Steam ID, rutas locales ni archivos.
+            </p>
+        </div>
+        <button class="btn-close-dialog" id="btn-close-settings">CERRAR</button>
+    </dialog>
+
     <!-- Restore Confirmation Dialog -->
     <dialog id="restore-dialog">
         <div class="dialog-title">⚠️ RESTAURAR JUEGO</div>
@@ -166,6 +188,8 @@
         </div>
     </div>
 
+    <!-- Analytics — desactivado por defecto, requiere consentimiento explícito -->
+    <script src="analytics.js"></script>
     <script src="script.js"></script>
 </body>
 
