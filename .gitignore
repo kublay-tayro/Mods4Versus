@@ -103,3 +103,6 @@ coverage/
 *.temp
 *.cache
 .cache/
+
+# Ignorar instaladores y ejecutables de Windows
+*.exe
