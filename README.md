@@ -11,11 +11,11 @@
 
 <!-- BOTONES PRINCIPALES DE ACCIÓN -->
 <a href="https://mods4versus.pages.dev/">
-  <img src="https://img.shields.io/badge/⬇️%20DESCARGAR%20MODS4VERSUS-PÁGINA%20OFICIAL%20(v1.2.2)-CC0000?style=for-the-badge&logoColor=white&labelColor=990000" height="46" alt="Descargar Mods4Versus">
+  <img src="./assets/btn-descargar.svg" height="48" alt="Descargar Mods4Versus">
 </a>
 &nbsp;&nbsp;
 <a href="https://mods4versus.pages.dev/">
-  <img src="https://img.shields.io/badge/🌐%20VISITAR%20PÁGINA%20WEB%20OFICIAL-MODS4VERSUS.PAGES.DEV-1A1A1A?style=for-the-badge&logoColor=white&labelColor=111111" height="46" alt="Visitar Página Web Oficial">
+  <img src="./assets/btn-web.svg" height="48" alt="Visitar Página Web Oficial">
 </a>
 
 <br><br>
@@ -32,7 +32,7 @@
 ---
 
 > [!IMPORTANT]
-> ### 🚨 ¡MODS4VERSUS YA TIENE PÁGINA WEB OFICIAL!
+> ### 🚨 <a href="https://mods4versus.pages.dev/"><img src="./assets/alert-title.svg" alt="¡MODS4VERSUS YA TIENE PÁGINA WEB OFICIAL!" height="24"></a>
 > Si llegaste desde **TikTok**, YouTube o cualquier red social, **la descarga de la versión más reciente (v1.2.2), las guías oficiales y las futuras actualizaciones se encuentran centralizadas en nuestra nueva web**:
 > 
 > 👉 **[https://mods4versus.pages.dev/](https://mods4versus.pages.dev/)**
@@ -101,7 +101,7 @@ Inicia *Left 4 Dead 2* desde Steam, entra a cualquier partida de Versus y juega 
 <div align="center">
 
 <a href="https://mods4versus.pages.dev/">
-  <img src="https://img.shields.io/badge/⬇️%20DESCARGAR%20MODS4VERSUS-IR%20A%20LA%20WEB%20OFICIAL-CC0000?style=for-the-badge&logoColor=white&labelColor=990000" height="42" alt="Descargar Mods4Versus">
+  <img src="./assets/btn-descargar.svg" height="48" alt="Descargar Mods4Versus">
 </a>
 
 </div>
